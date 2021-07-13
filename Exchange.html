@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/main.css">
+    <link href="bootstrap-4.4.1.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        var state = "Buy";
+        var Buy = function () {
+            
+        state = "Buy";
+            document.getElementsByClassName("buy")[0].classList.remove("grayed");
+            document.getElementsByClassName("buy")[0].classList.add("actGreen");
+
+            document.getElementsByClassName("sell")[0].classList.add("grayed");
+            document.getElementsByClassName("sell")[0].classList.remove("actRed");
+            
+            document.getElementsByClassName("TransactCrypto")[0].style.backgroundColor = "rgb(85 189 108)";
+
+            document.getElementsByClassName("TransactCryptoText")[0].innerHTML = document.getElementsByClassName("TransactCryptoText")[0].innerHTML.replace("Sell","Buy");
+        }
+        var Sell = function () {
+            
+        state = "Sell";
+            document.getElementsByClassName("sell")[0].classList.remove("grayed");
+            document.getElementsByClassName("sell")[0].classList.add("actRed");
+
+            document.getElementsByClassName("buy")[0].classList.add("grayed");
+            document.getElementsByClassName("buy")[0].classList.remove("actGreen");
+            document.getElementsByClassName("TransactCryptoText")[0].innerHTML =  document.getElementsByClassName("TransactCryptoText")[0].innerHTML.replace("Buy","Sell");
+
+            document.getElementsByClassName("TransactCrypto")[0].style.backgroundColor = "rgb(239, 83, 80)";
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">CRYPTOL&nbsp;</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span
+                class="navbar-toggler-icon"></span> </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent"><a class="nav-link" href="#">Exchange </a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent"><a class="nav-link" href="#">Getting
+                    Started </a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent"><a class="nav-link"
+                        href="#">Balances</a>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent"><a class="nav-link"
+                            href="#">T&C</a>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent"><a class="nav-link"
+                                href="#">About us</a>
+                            <form class="form-inline my-2 my-lg-0">
+                            </form>
+                        </div>
+    </nav>
+    <!-- End -->
+    <div class="container-1">
+        <div class="row chart">
+            <div class="col-9">
+                <div class="tradingview-widget-container">
+                    <div class="col-xl-9" id="tradingview_4df86"></div>
+                    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                    <script type="text/javascript">
+                        // var resp = "https://api.lunarcrush.com/v2?data=assets&key=mg9a5zywt3h6spop5yexdu&symbol=BTC,ETH,USDT,MATIC,ADA,DOGE,BNB,ETC,ATOM,LTC,XRP,CAKE,BCHZ&indicators=close";
+                        // console.log(resp);
+                        var coin = "BINANCE:BTCUSD";
+                        new TradingView.widget(
+                            {
+                                "width": "70em",
+                                "height": "30em",
+                                "symbol": coin,
+                                "interval": "D",
+                                "timezone": "Asia/Kolkata",
+                                "theme": "light",
+                                "style": "1",
+                                "locale": "in",
+                                "toolbar_bg": "#f1f3f6",
+                                "enable_publishing": false,
+                                "hide_top_toolbar": false,
+                                "allow_symbol_change": true,
+                                "save_image": false,
+                                "container_id": "tradingview_4df86"
+                            }
+                        );
+                        var openChart = function (coinRec) {
+                            coin = "BINANCE:" + coinRec;
+                            new TradingView.widget(
+                                {
+                                    "width": "70em",
+                                    "height": "30em",
+                                    "symbol": coin,
+                                    "interval": "D",
+                                    "timezone": "Asia/Kolkata",
+                                    "theme": "light",
+                                    "style": "1",
+                                    "locale": "in",
+                                    "toolbar_bg": "#f1f3f6",
+                                    "enable_publishing": false,
+                                    "hide_top_toolbar": false,
+                                    "allow_symbol_change": true,
+                                    "save_image": false,
+                                    "container_id": "tradingview_4df86"
+                                }
+                            );
+                            str = coinRec.replace('USD', '')
+                            document.getElementsByClassName("hSygGi")[1].innerHTML = str;
+                            document.getElementsByClassName("kZfXKT")[0].value = str;
+                            document.getElementsByClassName("TransactCryptoText")[0].innerHTML = state + " " + str;
+
+                        }
+
+
+                    </script>
+                </div>
+            </div>
+            <div class="col ">
+                <div class="heading">Currencies</div>
+                <div class="cont">
+                    <a class="item" onclick="openChart('BTCUSD')">
+                        <div class="currency-logo"><img src="https://media.wazirx.com/media/btc/84.png" alt="USDT"
+                                class="sc-fjdhpX gcvOpy"></div>
+                        <div class="market">
+                            <div class="market-name"><span class="market-name-text">btc<span
+                                        class="subtext">/usd</span></span></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="cont">
+                    <a class="item" onclick="openChart('ETHUSD')">
+                        <div class="currency-logo"><img src="https://media.wazirx.com/media/eth/84.png" alt="ETH"
+                                class="sc-fjdhpX gcvOpy"></div>
+                        <div class="market">
+                            <div class="market-name"><span class="market-name-text">eth<span
+                                        class="subtext">/usd</span></span></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="cont">
+                    <a class="item" onclick="openChart('BTCUSDT')">
+                        <div class="currency-logo"><img src="https://media.wazirx.com/media/usdt/84.png" alt="USDT"
+                                class="sc-fjdhpX gcvOpy"></div>
+                        <div class="market">
+                            <div class="market-name"><span class="market-name-text">usdt<span
+                                        class="subtext">/usd</span></span></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="cont">
+                    <a class="item" onclick="openChart('MATICUSD')">
+                        <div class="currency-logo"><img src="https://media.wazirx.com/media/matic/84.png" alt="MTC"
+                                class="sc-fjdhpX gcvOpy"></div>
+                        <div class="market">
+                            <div class="market-name"><span class="market-name-text">matic<span
+                                        class="subtext">/usd</span></span></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="cont">
+                    <a class="item" onclick="openChart('ADAUSD')">
+                        <div class="currency-logo"><img src="https://media.wazirx.com/media/ada/84.png" alt="ada"
+                                class="sc-fjdhpX gcvOpy"></div>
+                        <div class="market">
+                            <div class="market-name"><span class="market-name-text">ada<span
+                                        class="subtext">/usd</span></span></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="cont">
+                    <a class="item" onclick="openChart('DOGEUSD')">
+                        <div class="currency-logo"><img src="https://media.wazirx.com/media/doge/84.png" alt="doge"
+                                class="sc-fjdhpX gcvOpy"></div>
+                        <div class="market">
+                            <div class="market-name"><span class="market-name-text">doge<span
+                                        class="subtext">/usd</span></span></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="cont">
+                    <a class="item" onclick="openChart('BNBUSD')">
+                        <div class="currency-logo"><img src="https://media.wazirx.com/media/bnb/84.png" alt="bnb"
+                                class="sc-fjdhpX gcvOpy"></div>
+                        <div class="market">
+                            <div class="market-name"><span class="market-name-text">bnb<span
+                                        class="subtext">/usd</span></span></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="cont">
+                    <a class="item" onclick="openChart('ETCUSD')">
+                        <div class="currency-logo"><img src="https://media.wazirx.com/media/etc/84.png" alt="etc"
+                                class="sc-fjdhpX gcvOpy"></div>
+                        <div class="market">
+                            <div class="market-name"><span class="market-name-text">etc<span
+                                        class="subtext">/usd</span></span></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="cont">
+                    <a class="item" onclick="openChart('ATOMUSD')">
+                        <div class="currency-logo"><img src="https://media.wazirx.com/media/atom/84.png" alt="atom"
+                                class="sc-fjdhpX gcvOpy"></div>
+                        <div class="market">
+                            <div class="market-name"><span class="market-name-text">atom<span
+                                        class="subtext">/usd</span></span></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="cont">
+                    <a class="item" onclick="openChart('LTCUSD')">
+                        <div class="currency-logo"><img src="https://media.wazirx.com/media/ltc/84.png" alt="ltc"
+                                class="sc-fjdhpX gcvOpy"></div>
+                        <div class="market">
+                            <div class="market-name"><span class="market-name-text">LTC<span
+                                        class="subtext">/usd</span></span></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="cont">
+                    <a class="item" onclick="openChart('XRPUSD')">
+                        <div class="currency-logo"><img src="https://media.wazirx.com/media/xrp/84.png" alt="Ripple"
+                                class="sc-fjdhpX gcvOpy"></div>
+                        <div class="market">
+                            <div class="market-name"><span class="market-name-text">xrp<span
+                                        class="subtext">/usd</span></span></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="cont">
+                    <a class="item" onclick="openChart('CAKEUSD')">
+                        <div class="currency-logo"><img src="https://media.wazirx.com/media/cake/84.png" alt="cake"
+                                class="sc-fjdhpX gcvOpy"></div>
+                        <div class="market">
+                            <div class="market-name"><span class="market-name-text">CAKE<span
+                                        class="subtext">/usd</span></span></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="cont okboss">
+                    <a class="item" onclick="openChart('BCHUSD')">
+                        <div class="currency-logo"><img src="https://media.wazirx.com/media/bch/84.png" alt="bch"
+                                class="sc-fjdhpX gcvOpy"></div>
+                        <div class="market">
+                            <div class="market-name"><span class="market-name-text">bch<span
+                                        class="subtext">/usd</span></span></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4">
+                <div class="sc-bdVaJa sc-krvtoX eqmIRJ">
+                    <div class="sc-daURTG cLPynA sc-bdVaJa gUKorA">
+                        <div class="sc-lkqHmb eNLTVl">
+                            <div class="buy actGreen" onclick="Buy()">
+                                <h6 class="sc-bwzfXH hlhjes">Buy</h6>
+                            </div>
+                            <div class="sell grayed" onclick='Sell()'>
+                                <h6 class="sc-bwzfXH hlhjes">Sell</h6>
+                            </div>
+                        </div>
+                        <div class="sc-eLExRp guxsHv">
+                            <div>
+                                <form class="sc-gPEVay iOMNyh">
+
+                                    <div class="sc-bdVaJa sc-cmthru grRINs">
+                                        <div class="sc-bdVaJa sc-cLQEGU bYnCFU">
+                                            <div class="sc-bdVaJa sc-hZSUBg jXyWCZ">
+                                                <div class="sc-bdVaJa sc-iuJeZd gwpLlM"><span
+                                                        class="sc-bwzfXH hjQJfp">AT PRICE</span><span
+                                                        class="sc-bwzfXH hSygGi">usd</span></div>
+                                                <input readonly type="text" autocomplete="off" spellcheck="false"
+                                                    autocorrect="off" inputmode="decimal" class="sc-cMhqgX kZfXKT"
+                                                    value="80.800">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sc-bdVaJa sc-cmthru grRINs">
+                                        <div class="sc-bdVaJa sc-cLQEGU bYnCFU">
+                                            <div class="sc-bdVaJa sc-hZSUBg jXyWCZ">
+                                                <div class="sc-bdVaJa sc-iuJeZd gwpLlM"><span
+                                                        class="sc-bwzfXH hjQJfp">Amount</span><span
+                                                        class="sc-bwzfXH hSygGi">matic</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sc-bdVaJa sc-cmthru grRINs">
+                                        <div class="sc-bdVaJa sc-cLQEGU bYnCFU">
+                                            <div class="sc-bdVaJa sc-hZSUBg jXyWCZ">
+                                                <div class="sc-bdVaJa sc-iuJeZd gwpLlM"><span
+                                                        class="sc-bwzfXH hjQJfp">Total</span><span
+                                                        class="sc-bwzfXH hSygGi">usd</span></div><input type="text"
+                                                    autocapitalize="off" autocomplete="off" spellcheck="false"
+                                                    autocorrect="off" inputmode="decimal" class="sc-cMhqgX kZfXKT"
+                                                    value="0">
+                                            </div>
+                                        </div>
+                                    </div><button height="40px" type="submit" class="sc-dnqmqq TransactCrypto"><span
+                                            color="#ffffff" class="sc-bwzfXH TransactCryptoText">Buy matic</span></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
