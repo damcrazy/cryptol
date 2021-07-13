@@ -1,0 +1,470 @@
+/*! CSS Used from: https://wazirx.com/static/css/main.c9f79a20.chunk.css */
+
+img {
+    border: 0;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+button {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+button {
+    overflow: visible;
+}
+
+button {
+    text-transform: none;
+}
+
+button {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td,
+th {
+    padding: 0;
+}
+
+@media print {
+    *,
+     :after,
+     :before {
+        color: #000 !important;
+        text-shadow: none !important;
+        background: transparent !important;
+        box-shadow: none !important;
+    }
+    thead {
+        display: table-header-group;
+    }
+    img,
+    tr {
+        page-break-inside: avoid;
+    }
+    img {
+        max-width: 100% !important;
+    }
+    .table {
+        border-collapse: collapse !important;
+    }
+    .table td,
+    .table th {
+        background-color: #fff !important;
+    }
+}
+
+*,
+:after,
+:before {
+    box-sizing: border-box;
+}
+
+button {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+img {
+    vertical-align: middle;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+table {
+    background-color: initial;
+}
+
+th {
+    text-align: left;
+}
+
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.table>tbody>tr>td,
+.table>thead>tr>th {
+    padding: 8px;
+    line-height: 1.42857;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+
+.table>thead>tr>th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #ddd;
+}
+
+.table>thead:first-child>tr:first-child>th {
+    border-top: 0;
+}
+
+.table>thead>tr>th.active {
+    background-color: #f5f5f5;
+}
+
+.table-responsive {
+    min-height: 0.01%;
+    overflow-x: auto;
+}
+
+@media screen and (max-width: 767px) {
+    .table-responsive {
+        width: 100%;
+        margin-bottom: 15px;
+        overflow-y: hidden;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        border: 1px solid #ddd;
+    }
+    .table-responsive>.table {
+        margin-bottom: 0;
+    }
+    .table-responsive>.table>tbody>tr>td,
+    .table-responsive>.table>thead>tr>th {
+        white-space: nowrap;
+    }
+}
+
+.mdi:before {
+    display: inline-block;
+    font: normal normal normal 24px/1 Material Design Icons;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0);
+}
+
+.mdi-arrow-down:before {
+    content: "\F045";
+}
+
+::placeholder {
+    color: #d3d3d3;
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    color: #d3d3d3;
+}
+
+::-ms-input-placeholder {
+    color: #d3d3d3;
+}
+
+.text-large {
+    font-size: 14px !important;
+    line-height: 1.43;
+}
+
+.text-bold {
+    font-weight: 700;
+}
+
+.not-selectable {
+    -webkit-touch-callout: none;
+    user-select: none;
+}
+
+.transact-table-wrapper {
+    border-radius: 4px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+.transact-table-box {
+    background-color: #eceff1;
+    margin-bottom: 0;
+    width: 100%;
+    padding: 0 1px 16px;
+    border-collapse: initial;
+    border-spacing: 0;
+}
+
+.transact-table-box thead>tr {
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+    background: #fff;
+}
+
+.transact-table-box thead>tr th {
+    vertical-align: middle;
+    color: rgba(38, 50, 56, 0.54);
+    font-size: 10px;
+    line-height: 1.2;
+    font-weight: 700;
+    padding: 8px 14px !important;
+    border-bottom: 1px solid #ddd;
+    text-transform: uppercase;
+}
+
+.transact-table-box thead>tr th:first-child {
+    padding: 2px 2px 2px 16px;
+}
+
+.transact-table-box tbody>tr.record {
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+}
+
+.transact-table-box tbody>tr.record.even {
+    background: #fafafa;
+}
+
+.transact-table-box tbody>tr.record.odd {
+    background: #fdfdfd;
+}
+
+.transact-table-box tbody>tr.record:hover {
+    background: #f6f6f6;
+}
+
+.transact-table-box tbody>tr.record td {
+    vertical-align: middle;
+    color: rgba(38, 50, 56, 0.87);
+    padding: 2px 14px;
+    font-size: 12px;
+}
+
+.transact-table-box tbody>tr.record td:first-child {
+    padding: 2px 2px 2px 16px;
+    text-align: left;
+}
+
+.transact-table-box tbody>tr.record td:not(:nth-child(2)) {
+    text-align: right;
+}
+
+.transact-table-box tbody>tr.spacer {
+    background: #eceff1;
+    display: table-row;
+}
+
+.transact-table-box tbody>tr.spacer td {
+    background: #eceff1;
+}
+
+.transact-table-box tbody>tr.spacer.top-spacer td {
+    padding: 4px 0;
+    border-top: 1px solid #dee1e2;
+}
+
+.table__thead__th.sortable {
+    cursor: pointer;
+}
+
+.table__thead__th .mdi.marker {
+    opacity: 0;
+}
+
+.table__thead__th.active {
+    color: #3067f0;
+    background-color: #fff !important;
+}
+
+.table__thead__th.active .mdi.marker {
+    opacity: 1;
+}
+
+.table__thead__th__wrapper {
+    white-space: nowrap;
+}
+
+.table>thead>tr>th {
+    border-bottom: 1px solid #ddd;
+    padding: 4px 14px;
+}
+
+.table>tbody>tr>td {
+    padding: 2px 14px;
+    border: none;
+}
+
+
+/*! CSS Used from: Embedded */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    margin: 0px;
+    padding: 0px;
+}
+
+:focus {
+    outline: none;
+}
+
+.kCgltP {
+    display: block;
+    color: rgb(146, 146, 146);
+    font-size: 12px;
+    letter-spacing: 0.4px;
+    text-align: left;
+    font-weight: bold;
+    line-height: 1.33;
+}
+
+.gcvOpy {
+    height: 14px;
+    width: 14px;
+}
+
+.gPpbcn {
+    display: flex;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.cneiqS {
+    height: 32px;
+    border-radius: 4px;
+    position: relative;
+    box-shadow: none;
+    cursor: pointer;
+    outline: 0px;
+    user-select: none;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    background: transparent;
+    color: rgb(146, 146, 146);
+    text-align: left;
+    width: 80px;
+    margin: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.cneiqS:hover {
+    background-color: rgb(0, 200, 83);
+    border-color: rgb(0, 200, 83);
+}
+
+.cneiqS:hover .sc-bwzfXH {
+    color: white;
+}
+
+.WuhiP {
+    height: 32px;
+    border-radius: 4px;
+    position: relative;
+    box-shadow: none;
+    cursor: pointer;
+    outline: 0px;
+    user-select: none;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    background: transparent;
+    color: rgb(146, 146, 146);
+    text-align: left;
+    width: 80px;
+    margin: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.WuhiP:hover {
+    background-color: rgb(244, 67, 54);
+    border-color: rgb(244, 67, 54);
+}
+
+.WuhiP:hover .sc-bwzfXH {
+    color: white;
+}
+
+
+/*! CSS Used fontfaces */
+
+@font-face {
+    font-family: Material Design Icons;
+    src: url(https://wazirx.com/static/media/materialdesignicons-webfont.3bd364e5.eot);
+    src: url(https://wazirx.com/static/media/materialdesignicons-webfont.3bd364e5.eot) format("embedded-opentype"), url(https://wazirx.com/static/media/materialdesignicons-webfont.9b9f2c44.woff2) format("woff2"), url(https://wazirx.com/static/media/materialdesignicons-webfont.eec7f0f7.woff) format("woff"), url(https://wazirx.com/static/media/materialdesignicons-webfont.3ef6639a.ttf) format("truetype"), url(https://wazirx.com/static/media/materialdesignicons-webfont.f89ba2d8.svg) format("svg");
+    font-weight: 400;
+    font-style: normal;
+    font-display: block;
+}
+
+.sc-dnqmqq {
+    height: 32px;
+    border-radius: 4px;
+    position: relative;
+    box-shadow: none;
+    cursor: pointer;
+    outline: 0px;
+    user-select: none;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    background: transparent;
+    color: rgb(146, 146, 146);
+    text-align: left;
+    width: 80px;
+    margin: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.gcvOpy {
+    height: 14px;
+    width: 14px;
+}
+
+div.sc-bdVaJa {
+    align-content: center !important;
+}
+
+.gPpbcn {
+    display: flex;
+    justify-content: center;
+}
+
+.head {
+    background-color: rgb(40, 123, 255) !important;
+}
+
+.table__thead__th__wrapper {
+    color: white !important;
+}
+
+.text-bold {
+    font-size: 100% !important;
+}

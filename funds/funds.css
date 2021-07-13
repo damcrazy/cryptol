@@ -1,0 +1,29 @@
+html,
+body {
+    height: 100%;
+}
+
+.frame,
+.full {
+    display: flex;
+    align-content: space-around;
+    height: 100%;
+    width: 100%;
+}
+
+.convert {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.converter-footer {
+    padding-top: 0px !important;
+}
+
+.active {
+    transition: 1s;
+    border-radius: 6px !important;
+    background-color: rgba(40, 123, 255) !important;
+    color: white !important;
+}
